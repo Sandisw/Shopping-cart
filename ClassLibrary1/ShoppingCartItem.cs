@@ -8,8 +8,15 @@ namespace ShoppingLibrary
 {
     internal class ShoppingCartItem
     {
-        public ShoppingCartItem =();
-        public SubTotal=
+        public string Description { get; set; }
+        public double Cost { get; set; }
+        public int SubTotal { get; set; }
+        
+        public Product(string Description, double Cost)
+          {
+            Description = description;
+            Cost= cost;
+          }
 
     }
 }
