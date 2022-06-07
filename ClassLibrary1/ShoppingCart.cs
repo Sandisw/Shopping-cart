@@ -18,7 +18,7 @@ namespace ShoppingLibrary
         Product[] products=new Product[numberOfProducts];
         
         
-        public void ShoppingCart(object sender, EventArgs)
+        public void ShoppingCartItems ()
         {
             products[1] = new Product("Noodles", 50);
             products[2] = new Product("Pasta", 60);
@@ -31,14 +31,14 @@ namespace ShoppingLibrary
             dudProducts.SelectedIndex =0;
         }
         
-        public void btnExit_click(object sender, EventArgs)
+        public void btnExit_click()
         {
             close()
         }
         
         public void by NewOrder_Click()
         {
-           4txtOrderAddress.Text="";
+            OrderAddress.Text="";
             itemsOrdered=0;
             ItemsOrdered.Text= "Items Ordered:0";
        
@@ -48,7 +48,7 @@ namespace ShoppingLibrary
             }
              
                 dudProducts.SelectedIndex=0;
-                1stProducts.Items?Clear();
+                Products.Items?Clear();
                 Total Cost.Text="Total Cost";
                 txtMailingLabel.Text="";
             }
@@ -72,16 +72,16 @@ namespace ShoppingLibrary
                         else
                         {
                             double totalCost=0;
-                            1stProducts.Items.Clear();
+                            Products.Items.Clear();
                             for(int i=0; i< numberOfProducts; i++)
                             {
                                 if(products[i].NumberOrdered i=0)
                                 {
-                                   1stProducts.Items Add(products[i].NumberOrdered.ToString() +""+ products[i].Desciption);
+                                   Products.Items Add(products[i].NumberOrdered.ToString() +""+ products[i].Desciption);
                                     totalCost+=products [i].Cost* products[i].NumberOrdered;
                                 }
                             }
-                            1stProducts.Text="Total Cost:150 + String.Format("{0;0}");
+                            Products.Text="Total Cost:150 + String.Format("{0;0}");
                         }
                  }
                         
