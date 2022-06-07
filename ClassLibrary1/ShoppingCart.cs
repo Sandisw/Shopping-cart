@@ -26,7 +26,7 @@ namespace ShoppingLibrary
             
             for (int i=0;i< numberOfProducts; i++)
             {
-               3dudProducts.Item.Add(products[i].Description);
+               dudProducts.Item.Add(products[i].Description);
             }
             dudProducts.SelectedIndex =0;
         }  
